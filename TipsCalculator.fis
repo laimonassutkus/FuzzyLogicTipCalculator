@@ -1,0 +1,97 @@
+[System]
+Name='TipsCalculator'
+Type='sugeno'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=49
+AndMethod='min'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='CheckSum'
+Range=[0 150]
+NumMFs=4
+MF1='Little':'zmf',[0 20]
+MF2='Fair':'gaussmf',[6.37 20]
+MF3='Much':'gaussmf',[16.77 60.25]
+MF4='SuperMuch':'smf',[75 150]
+
+[Input2]
+Name='ServiceQuality'
+Range=[0 10]
+NumMFs=3
+MF1='Bad':'zmf',[0 4]
+MF2='Average':'gaussmf',[1.274 5]
+MF3='Good':'smf',[5 10]
+
+[Input3]
+Name='NumberOfPeople'
+Range=[0 10]
+NumMFs=3
+MF1='Few':'zmf',[0 3]
+MF2='Average':'gaussmf',[1.274 4]
+MF3='Many':'smf',[6 10]
+
+[Output1]
+Name='Tip'
+Range=[0 1]
+NumMFs=4
+MF1='SmallAmmount':'linear',[0 0 0 0.02]
+MF2='AverageAmmount':'linear',[0 0 0 0.05]
+MF3='GoodAmmount':'linear',[0 0 0 0.1]
+MF4='GenerousAmmount':'linear',[0 0 0 0.15]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 2 1, 3 (1) : 1
+1 3 1, 4 (1) : 1
+2 1 1, 1 (1) : 1
+2 2 1, 2 (1) : 1
+2 3 1, 4 (1) : 1
+3 1 1, 1 (1) : 1
+3 2 1, 2 (1) : 1
+3 3 1, 3 (1) : 1
+4 1 1, 1 (1) : 1
+4 2 1, 1 (1) : 1
+4 3 1, 2 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 2 1, 2 (1) : 1
+1 2 2, 3 (1) : 1
+1 2 3, 3 (1) : 1
+1 3 3, 4 (1) : 1
+1 2 1, 3 (1) : 1
+1 2 2, 3 (1) : 1
+1 2 3, 4 (1) : 1
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 2 1, 3 (1) : 1
+2 2 2, 3 (1) : 1
+2 2 3, 3 (1) : 1
+3 2 1, 1 (1) : 1
+3 2 2, 2 (1) : 1
+3 2 3, 3 (1) : 1
+3 3 3, 3 (1) : 1
+3 3 2, 2 (1) : 1
+4 3 3, 2 (1) : 1
+4 3 2, 2 (1) : 1
+4 2 2, 1 (1) : 1
+4 2 3, 1 (1) : 1
+3 2 3, 2 (1) : 1
+3 2 2, 1 (1) : 1
+1 3 3, 4 (1) : 1
+1 3 2, 4 (1) : 1
+1 3 1, 4 (1) : 1
+2 3 2, 4 (1) : 1
+3 1 1, 1 (1) : 1
+3 1 2, 1 (1) : 1
+3 1 3, 1 (1) : 1
+4 1 2, 1 (1) : 1
