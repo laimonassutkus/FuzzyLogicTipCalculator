@@ -1,4 +1,4 @@
-fileName = 'TipsCalculatorOptimised.fis';
+fileName = 'TipsCalculator.fis';
 fis = readfis(fileName);
 
 prompt1 = 'How much did you spend?  ';
